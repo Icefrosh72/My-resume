@@ -6,37 +6,65 @@
 	list-style: none;
 	box-sizing: border-box;
 	font-family: 'Ubuntu', sans-serif;
+    
 }
 
-body{
-	background-image: url('../img/pics.jpg');
+a{
+	text-decoration: none;
+	color: #fff;
 }
 
-.resume{
+
+
+section{
 	width: 800px;
-	background: #fff;
+	background: #000;
 	margin: 25px auto;
 	display: flex;
 }
 
 .left{
-	background: #292b2f;
+	background: #191d2b;
 	width: 250px;
 	padding: 0 20px;
+	position: relative;
 }
 
 .right{
 	width: calc(100% - 250px);
 }
 
-.left .img_holder{
+.left .profile-img{
 	text-align: center;
 	padding: 20px 0;
 }
 
-.left .img_holder img{
+.left .profile-img img{
 	width: 200px;
-	border-radius: 30px;
+	border-radius: 15px 5px;
+	border: 1px solid  #3366ff;
+}
+
+.profile-img::before {
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: 20px;
+    top: 10px;
+    border-top: 10px solid #3366ff;
+    border-left: 10px solid #3366ff;
+}
+
+.profile-img::after {
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    right: 20px;
+    bottom: 80%;
+    border-bottom: 10px solid #3366ff;
+    border-right: 10px solid #3366ff;
 }
 
 .pb{
@@ -49,7 +77,9 @@ body{
 	text-transform: uppercase;
 	letter-spacing: 5px;
 	padding-bottom: 10px;
-	color: #3525af;
+	background: linear-gradient(to left, #3366ff 0%, #ff0066 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 	position: relative;
 	text-align: right;
 	margin-bottom: 15px;
@@ -62,7 +92,7 @@ body{
 	right: 0;
 	width: 50px;
 	height: 3px;
-	background: #3525af;
+	background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%);
 }
 
 .left .icon{
@@ -76,14 +106,14 @@ body{
 	font-size: 13px;
 }
 
-.contact .li_wrap{
+.contact-info .sub-list{
 	display: flex;
 	align-items: center;
 	width: 100%;
 	margin-bottom: 15px;
 }
 
-.contact .li_wrap .icon{
+.contact-info .sub-list .icon{
 	width: 50px;
 	height: 50px;
 	background: #fff;
@@ -94,7 +124,7 @@ body{
 	margin-right: 15px;
 }
 
-.contact .li_wrap .text{
+.contact-info .sub-list .text{
 	width: calc(100% - 50px);
 	word-break: break-word;
 	color: #fff;
@@ -107,8 +137,8 @@ body{
 	justify-content: space-between;
 }
 
-.skills .li_wrap,
-.hobbies .li_wrap{
+.skills .sub-list,
+.hobbies .sub-list{
 	width: 100px;
 	height: 100px;
 	margin-bottom: 15px;
@@ -119,100 +149,99 @@ body{
 	justify-content: center;
 }
 
-.skills .li_wrap{
+.skills .sub-list{
 	background: #fff;
 }
 
-.skills .li_wrap .text,
-.hobbies .li_wrap .text{
+.skills .sub-list .text,
+.hobbies .sub-list .text{
 	margin-top: 5px;
 }
 
-.hobbies .li_wrap{
+.hobbies .sub-list{
 	border: 2px solid #fff;
 }
 
-.hobbies .li_wrap .icon,
-.hobbies .li_wrap .text{
+.hobbies .sub-list .icon,
+.hobbies .sub-list .text{
 	color: #fff;
 }
 
-.hobbies .li_wrap:hover{
+.hobbies .sub-list:hover{
 	background: #fff;
 }
 
-.hobbies .li_wrap:hover .icon,
-.hobbies .li_wrap:hover .text{
+.hobbies .sub-list:hover .icon,
+.hobbies .sub-list:hover .text{
 	color: #9153c9;
 }
 
 .header{
-	background: #292b2f;
+	background: #252b41;
 	padding: 15px 30px;
 	color: #fff;
 	height: 240px;
 }
 
-.header .name{
+.header .user-name{
 	font-size: 24px;
 	text-transform: uppercase;
 	font-weight: 700;
-	color: #3525af;
 }
 
-.header .role{
+.header .user-role{
 	font-weight: 300;
 	font-size: 20px;
 }
 
-.header .about{
+.header .user-about{
 	margin-top: 20px;
 	line-height: 26px;
 }
 
-.right_inner{
+.content-details{
 	padding: 30px;
 	color: #292b2f;
 }
 
-.right_inner .education{
+.content-details .education{
 	margin-top: 30px;
 }
 
-.right_inner .li_wrap{
+.content-details .sub-list{
 	display: flex;
 	margin-bottom: 15px;
 }
 
-.right_inner .li_wrap .date {
+.content-details .sub-list .date {
     width: 125px;
     color: #9153c9;
 }
 
-.right_inner .li_wrap .info{
+.content-details .sub-list .info{
 	width: calc(100%  - 125px);
 	padding-left: 25px;
 	position: relative;
 }
 
-.right_inner .li_wrap .info_title{
+.content-details .sub-list .info_title{
 	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 2px;
 	color: #9153c9;
 }
 
-.right_inner .li_wrap .info_com{
+.content-details .sub-list .info_com{
 	font-weight: 300;
 	font-size: 14px;
 	margin-top: 3px;
 }
 
-.right_inner .li_wrap .info_cont{
+.content-details .sub-list .info_cont{
 	margin-top: 15px;
 }
 
-.right_inner .li_wrap .info:before{
+.content-details .sub-list .info:before{
 	content: "";
 	position: absolute;
 	top: 3px;
@@ -223,7 +252,7 @@ body{
 	border-radius: 50%;
 }
 
-.right_inner .li_wrap .info:after{
+.content-details .sub-list .info:after{
 	content: "";
 	position: absolute;
 	top: 10px;
@@ -232,3 +261,4 @@ body{
 	height: 90%;
 	background: #9153c9;
 }
+
